@@ -2,6 +2,7 @@ package com.sha.photoviewersample;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
     void showDialog() {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setMultiChoiceItems(
-                        getResources().getStringArray(R.array.options),
-                        Option.toArray(),
+                        Option.titles(),
+                        Option.getValues(),
                         (dialog1, position, isChecked) -> Option.values()[position].value = isChecked
                 ).create();
         dialog.show();
@@ -69,11 +70,7 @@ public class MainActivity extends AppCompatActivity {
         Builder builder = PhotoViewer.build(this, Data.urls())
                 .startAtIndex(startIndex)
                 .setOnDismissListener(
-                        () -> Toast.makeText(
-                                this,
-                                R.string.message_on_dismiss,
-                                Toast.LENGTH_SHORT
-                        ).show()
+                        () -> Log.d("PhotoViewer", "dismissed")
                 );
 
         builder.showStatusBar(Option.SHOW_STATUS_BAR.value);
@@ -96,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (Option.RANDOM_BACKGROUND.value)
             builder.setBackgroundColor(getRandomColor());
+
+        builder.showImagesIndicator(Option.SHOW_IMAGES_INDICATOR.value);
 
         builder.show();
     }

@@ -14,6 +14,8 @@ import com.sha.photoviewer.adapter.PhotosAdapter;
 import com.sha.photoviewer.pager.MultiTouchViewPager;
 import com.sha.photoviewer.touch.TouchHandler;
 
+import me.relex.circleindicator.CircleIndicator;
+
 @RestrictTo(RestrictTo.Scope.LIBRARY)
 public class PhotosView extends RelativeLayout {
 
@@ -79,6 +81,12 @@ public class PhotosView extends RelativeLayout {
         adapter = new PhotosAdapter(options);
         pager.setAdapter(adapter);
         pager.setCurrentItem(options.startAtIndex);
+
+        if (options.showImagesIndicator){
+            CircleIndicator indicator = findViewById(R.id.indicator);
+            indicator.setViewPager(pager);
+            pager.getAdapter().registerDataSetObserver(indicator.getDataSetObserver());
+        }
     }
 
 
@@ -99,7 +107,7 @@ public class PhotosView extends RelativeLayout {
 
     private void setupOverlay() {
         if (options.overlayView == null) return;
-        dismissContainer.addView(options.overlayView);
+        ((ViewGroup)findViewById(R.id.overlayView)).addView(options.overlayView);
     }
 
     @Override

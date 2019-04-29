@@ -122,6 +122,16 @@ public class Builder {
      *
      * @return this to chain easily
      */
+    public Builder showImagesIndicator(boolean show) {
+        options.showImagesIndicator = show;
+        return this;
+    }
+
+    /**
+     * photo container padding
+     *
+     * @return this to chain easily
+     */
     public Builder setContainerPadding(
             Context context,
             @DimenRes int start,

@@ -19,16 +19,4 @@
     <string name="got_it">Got it!</string>
     <string name="action_options">Options</string>
 
-    <string-array name="options">
-        <item>Show status bar</item>
-        <item>images margin</item>
-        <item>container padding</item>
-        <item>images rounding</item>
-        <item>swipe-to-dismiss</item>
-        <item>zooming</item>
-        <item>show overlay</item>
-        <item>random background</item>
-        <item>post-processing (via ImageRequestBuilder)</item>
-    </string-array>
-
 </resources>

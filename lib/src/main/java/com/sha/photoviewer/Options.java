@@ -22,6 +22,7 @@ public class Options {
     @ColorInt
     public int backgroundColor = Color.BLACK;
     public int startAtIndex;
+    public boolean showImagesIndicator = true;
 
     public OnPhotoSelectedListener onPhotoSelectedListener;
     public OnDismissListener onDismissListener;
