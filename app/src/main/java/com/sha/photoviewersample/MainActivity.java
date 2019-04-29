@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
         if (Option.PHOTO_MARGIN.value)
             builder.setPhotoMargin(this, R.dimen.image_margin);
 
-
         if (Option.CONTAINER_PADDING.value)
             builder.setContainerPadding(this, R.dimen.image_margin);
 

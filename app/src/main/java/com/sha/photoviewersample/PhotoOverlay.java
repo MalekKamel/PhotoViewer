@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.sha.photoviewersample.R;
-
 /*
  * Created by Alexander Krol (troy379) on 29.08.16.
  */
@@ -50,7 +48,7 @@ public class PhotoOverlay extends RelativeLayout {
     }
 
     private void init() {
-        View view = inflate(getContext(), R.layout.view_image_overlay, this);
+        View view = inflate(getContext(), R.layout.view_photo_overlay, this);
         tvDescription = view.findViewById(R.id.tvDescription);
         view.findViewById(R.id.btnShare).setOnClickListener(v -> sendShareIntent());
     }

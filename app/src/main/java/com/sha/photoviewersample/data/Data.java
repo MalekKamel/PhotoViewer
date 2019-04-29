@@ -21,31 +21,31 @@ public final class Data {
        return Arrays.asList(
                 new Image()
                         .setUrl(path("1"))
-                        .setDescription("Description"),
+                        .setDescription(" Macro Photography of Tree"),
                 new Image()
                         .setUrl(path("2"))
-                        .setDescription(""),
+                        .setDescription("Heart Red Leafed Tree on Red Field"),
                 new Image()
                         .setUrl(path("3"))
-                        .setDescription(""),
+                        .setDescription("Selective Focus Photography White Daisy Flower"),
                 new Image()
                         .setUrl(path("4"))
-                        .setDescription(""),
+                        .setDescription("Red and Black Bird on Red Flowers"),
                 new Image()
                         .setUrl(path("5"))
-                        .setDescription(""),
+                        .setDescription("Green Tree Plant Leaves"),
                 new Image()
                         .setUrl(path("6"))
-                        .setDescription(""),
+                        .setDescription("Body of Water Under Blue Sky"),
                 new Image()
                         .setUrl(path("7"))
-                        .setDescription(""),
+                        .setDescription("Seaside"),
                 new Image()
                         .setUrl(path("8"))
-                        .setDescription(""),
+                        .setDescription("Close-up of Tree Against Sky"),
                 new Image()
                         .setUrl(path("9"))
-                        .setDescription("")
+                        .setDescription("Gray Bridge and Trees")
         );
     }
 
