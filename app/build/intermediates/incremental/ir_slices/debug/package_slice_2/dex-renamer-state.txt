@@ -1,0 +1,4 @@
+#Tue Jan 08 13:09:10 EET 2019
+base.0=/media/sha/Soft/android/projects/lib/ImageViewer/app/build/intermediates/transforms/dexMerger/debug/2
+path.0=classes.dex
+renamed.0=classes.dex
