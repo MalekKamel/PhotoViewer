@@ -20,20 +20,20 @@ public class Options {
     public Context context;
     public List<String> urls;
     @ColorInt
-    int backgroundColor = Color.BLACK;
-    int startAtIndex;
+    public int backgroundColor = Color.BLACK;
+    public int startAtIndex;
 
-    OnPhotoSelectedListener onPhotoSelectedListener;
-    OnDismissListener onDismissListener;
+    public OnPhotoSelectedListener onPhotoSelectedListener;
+    public OnDismissListener onDismissListener;
     public OnPhotoLoadedListener onPhotoLoadedListener;
 
-    View overlayView;
-    int photoMarginPixels;
-    int[] containerPaddingPixels = new int[4];
-    boolean showStatusBar = false;
+    public View overlayView;
+    public int photoMarginPixels;
+    public int[] containerPaddingPixels = new int[4];
+    public boolean showStatusBar = false;
     public boolean isZoomable = true;
-    boolean canSwipeToDismiss = true;
-    PhotosDialog dialog;
+    public boolean canSwipeToDismiss = true;
+    public PhotosDialog dialog;
 
     @StyleRes
     int dialogStyle(){

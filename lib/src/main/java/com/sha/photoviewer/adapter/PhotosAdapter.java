@@ -8,22 +8,19 @@ import androidx.annotation.RestrictTo;
 
 import com.github.chrisbanes.photoview.PhotoView;
 import com.sha.photoviewer.Options;
-import com.sha.photoviewer.util.PicassoUtil;
 import com.sha.photoviewer.R;
+import com.sha.photoviewer.util.PicassoUtil;
 
-import java.util.HashSet;
 import java.util.List;
 
 @RestrictTo(RestrictTo.Scope.LIBRARY)
 public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHolder> {
 
-    private List<String> data;
-    private HashSet<ImageViewHolder> holders;
+    private List<Photo> list;
     private Options options;
 
     public PhotosAdapter(Options options) {
-        this.data = options.urls;
-        this.holders = new HashSet<>();
+        this.list = Photo.from(options.urls);
         this.options = options;
     }
 
@@ -31,10 +28,7 @@ public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHo
     public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.zoomable_image, parent, false);
 
-        ImageViewHolder holder = new ImageViewHolder(v);
-        holders.add(holder);
-
-        return holder;
+        return new ImageViewHolder(v);
     }
 
     @Override
@@ -44,36 +38,22 @@ public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHo
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return list.size();
     }
-
 
     public boolean isScaled(int index) {
-        for (ImageViewHolder holder : holders) {
-            if (holder.position == index) {
-                return holder.isScaled;
-            }
-        }
-        return false;
+        return list.get(index).isScaled;
     }
 
-   public void resetScale(int index) {
-        for (ImageViewHolder holder : holders) {
-            if (holder.position == index) {
-                holder.resetScale();
-                break;
-            }
-        }
+    public void resetScale(int index) {
+        list.get(index).view.setScale(1.0f, true);
     }
 
     public String getUrl(int index) {
-        return data.get(index);
+        return list.get(index).url;
     }
 
     class ImageViewHolder extends ViewHolder {
-
-        private int position = -1;
-        private boolean isScaled;
         private PhotoView photoView;
         private View progressBar;
 
@@ -85,17 +65,14 @@ public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHo
         }
 
         void bind(int position) {
-            this.position = position;
+            Photo item = list.get(position);
+            item.view = photoView;
 
-            show(data.get(position), position);
+            show(item.url, position);
 
             photoView.setOnScaleChangeListener(
-                    (scaleFactor, focusX, focusY) -> isScaled = photoView.getScale() > 1.0f
+                    (scaleFactor, focusX, focusY) -> item.isScaled = scaleFactor > 1.0f
             );
-        }
-
-        void resetScale() {
-            photoView.setScale(1.0f, true);
         }
 
         private void show(String url, int position) {

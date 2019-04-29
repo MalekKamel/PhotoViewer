@@ -13,7 +13,6 @@ MERGED from [androidx.cardview:cardview:1.0.0] /home/sha/.gradle/caches/transfor
 MERGED from [com.github.mmin18:realtimeblurview:1.1.0] /home/sha/.gradle/caches/transforms-2/files-2.1/90ef53bb63054d6a5f793d67190bd3cc/AndroidManifest.xml:2:1-11:12
 MERGED from [me.relex:circleindicator:1.2.2] /home/sha/.gradle/caches/transforms-2/files-2.1/04425af6af5b3179749817acb66027d7/AndroidManifest.xml:2:1-12:12
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/sha/.gradle/caches/transforms-2/files-2.1/405f01b12ec0d26585ad72f312eaaee8/AndroidManifest.xml:2:1-14:12
-MERGED from [me.relex:photodraweeview:1.1.0] /home/sha/.gradle/caches/transforms-2/files-2.1/9099a0559c13ee4a7aba518da707e2df/AndroidManifest.xml:2:1-10:12
 MERGED from [androidx.fragment:fragment:1.0.0] /home/sha/.gradle/caches/transforms-2/files-2.1/a9e282aceddf8296201a5689c49eee42/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/sha/.gradle/caches/transforms-2/files-2.1/62a3dd4e46968f92f95eb909cde3caba/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/sha/.gradle/caches/transforms-2/files-2.1/accfe8ec846f5f56a70008075e00f31f/AndroidManifest.xml:17:1-22:12
@@ -47,7 +46,7 @@ INJECTED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/Andr
 INJECTED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:1:1-23:12
 INJECTED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:1:1-23:12
 	package
-		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:2:11-52
+		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:2:11-46
 		INJECTED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml
 		INJECTED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -82,14 +81,14 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/sha/.
 		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:7:9-43
 	android:theme
 		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:9:9-40
-activity#com.sha.frescoimageviewersample.MainActivity
+activity#com.sha.photoviewersample.MainActivity
 ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:11:9-19:20
 	android:screenOrientation
 		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:13:13-49
 	android:theme
 		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:14:13-55
 	android:name
-		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:12:13-72
+		ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:12:13-66
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /media/sha/Soft/android/projects/lib/ImageViewer/app/src/main/AndroidManifest.xml:15:13-18:29
 action#android.intent.action.MAIN
@@ -122,8 +121,6 @@ MERGED from [me.relex:circleindicator:1.2.2] /home/sha/.gradle/caches/transforms
 MERGED from [me.relex:circleindicator:1.2.2] /home/sha/.gradle/caches/transforms-2/files-2.1/04425af6af5b3179749817acb66027d7/AndroidManifest.xml:8:5-10:41
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/sha/.gradle/caches/transforms-2/files-2.1/405f01b12ec0d26585ad72f312eaaee8/AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/sha/.gradle/caches/transforms-2/files-2.1/405f01b12ec0d26585ad72f312eaaee8/AndroidManifest.xml:5:5-44
-MERGED from [me.relex:photodraweeview:1.1.0] /home/sha/.gradle/caches/transforms-2/files-2.1/9099a0559c13ee4a7aba518da707e2df/AndroidManifest.xml:8:5-44
-MERGED from [me.relex:photodraweeview:1.1.0] /home/sha/.gradle/caches/transforms-2/files-2.1/9099a0559c13ee4a7aba518da707e2df/AndroidManifest.xml:8:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] /home/sha/.gradle/caches/transforms-2/files-2.1/a9e282aceddf8296201a5689c49eee42/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] /home/sha/.gradle/caches/transforms-2/files-2.1/a9e282aceddf8296201a5689c49eee42/AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/sha/.gradle/caches/transforms-2/files-2.1/62a3dd4e46968f92f95eb909cde3caba/AndroidManifest.xml:20:5-44

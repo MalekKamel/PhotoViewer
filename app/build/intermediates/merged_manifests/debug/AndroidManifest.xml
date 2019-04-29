@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.stfalcon.frescoimageviewersample"
+    package="com.sha.photoViewersample"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,7 +18,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.sha.frescoimageviewersample.MainActivity"
+            android:name="com.sha.photoviewersample.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNoActionBar" >
             <intent-filter>
@@ -30,7 +30,7 @@
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.stfalcon.frescoimageviewersample.com.squareup.picasso"
+            android:authorities="com.sha.photoViewersample.com.squareup.picasso"
             android:exported="false" />
     </application>
 

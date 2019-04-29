@@ -4,7 +4,7 @@
             "outputFile": "/media/sha/Soft/android/projects/lib/ImageViewer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/home/sha/.gradle/caches/transforms-2/files-2.1/49a9fc8cfc21b7175e6c75fc0aef0a83/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/home/sha/.gradle/caches/transforms-2/files-2.1/58c361d8b23f57524cb441ca6d8f773a/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
