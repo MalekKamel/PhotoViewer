@@ -14,37 +14,37 @@ public final class Data {
     private static final String BASE_PATH = "https://github.com/ShabanKamell/PhotoViewer/blob/master/blob/master/raw/";
 
     private static String path(String name){
-        return BASE_PATH + name + "?raw=true";
+        return BASE_PATH + name + ".jpeg?raw=true";
     }
 
     public static List<Image> images(){
        return Arrays.asList(
                 new Image()
-                        .setUrl(path("1.jpeg"))
+                        .setUrl(path("1"))
                         .setDescription("Description"),
                 new Image()
-                        .setUrl(path("2.jpeg"))
+                        .setUrl(path("2"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("3.jpeg"))
+                        .setUrl(path("3"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("4.jpg"))
+                        .setUrl(path("4"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("5.jpeg"))
+                        .setUrl(path("5"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("6.jpeg"))
+                        .setUrl(path("6"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("7.jpeg"))
+                        .setUrl(path("7"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("8.jpeg"))
+                        .setUrl(path("8"))
                         .setDescription(""),
                 new Image()
-                        .setUrl(path("9.jpeg"))
+                        .setUrl(path("9"))
                         .setDescription("")
         );
     }

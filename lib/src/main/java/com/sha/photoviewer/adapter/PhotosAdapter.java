@@ -67,6 +67,7 @@ public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHo
         void bind(int position) {
             Photo item = list.get(position);
             item.view = photoView;
+            photoView.setImageDrawable(null);
 
             show(item.url, position);
 
