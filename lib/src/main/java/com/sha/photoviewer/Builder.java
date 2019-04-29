@@ -122,8 +122,8 @@ public class Builder {
      *
      * @return this to chain easily
      */
-    public Builder showImagesIndicator(boolean show) {
-        options.showImagesIndicator = show;
+    public Builder showPagingIndicator(boolean show) {
+        options.showPagingIndicator = show;
         return this;
     }
 

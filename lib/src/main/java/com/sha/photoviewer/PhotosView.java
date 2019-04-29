@@ -82,7 +82,7 @@ public class PhotosView extends RelativeLayout {
         pager.setAdapter(adapter);
         pager.setCurrentItem(options.startAtIndex);
 
-        if (options.showImagesIndicator){
+        if (options.showPagingIndicator){
             CircleIndicator indicator = findViewById(R.id.indicator);
             indicator.setViewPager(pager);
             pager.getAdapter().registerDataSetObserver(indicator.getDataSetObserver());

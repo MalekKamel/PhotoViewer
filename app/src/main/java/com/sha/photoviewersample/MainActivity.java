@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -94,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         if (Option.RANDOM_BACKGROUND.value)
             builder.setBackgroundColor(getRandomColor());
 
-        builder.showImagesIndicator(Option.SHOW_IMAGES_INDICATOR.value);
+        builder.showPagingIndicator(Option.SHOW_PAGING_INDICATOR.value);
 
         builder.show();
     }

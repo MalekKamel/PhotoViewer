@@ -9,7 +9,7 @@ public enum Option {
     ZOOMING("zooming", true),
     SHOW_OVERLAY("show overlay", false),
     RANDOM_BACKGROUND("Random background", false),
-    SHOW_IMAGES_INDICATOR("Show images indicator", true);
+    SHOW_PAGING_INDICATOR("Show paging indicator", true);
 
     public boolean value;
     public String title;
