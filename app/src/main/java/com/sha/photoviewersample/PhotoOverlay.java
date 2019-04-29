@@ -1,4 +1,4 @@
-package com.sha.frescoimageviewersample;
+package com.sha.photoviewersample;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.sha.frescoimageviewersample.R;
+import com.sha.photoviewersample.R;
 
 /*
  * Created by Alexander Krol (troy379) on 29.08.16.

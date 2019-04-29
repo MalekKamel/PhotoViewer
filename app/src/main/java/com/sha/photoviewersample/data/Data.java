@@ -1,4 +1,4 @@
-package com.sha.frescoimageviewersample.data;
+package com.sha.photoviewersample.data;
 
 
 import com.annimon.stream.Stream;

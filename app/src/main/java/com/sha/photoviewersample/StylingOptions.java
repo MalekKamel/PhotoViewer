@@ -1,12 +1,8 @@
-package com.sha.frescoimageviewersample;
+package com.sha.photoviewersample;
 
 import android.content.Context;
 
 import androidx.appcompat.app.AlertDialog;
-
-import java.util.Collection;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class StylingOptions {
 

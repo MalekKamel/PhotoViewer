@@ -1,4 +1,4 @@
-package com.sha.frescoimageviewersample;
+package com.sha.photoviewersample;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sha.frescoimageviewersample.data.Data;
-import com.sha.frescoimageviewersample.data.Image;
+import com.sha.photoviewersample.data.Data;
+import com.sha.photoviewersample.data.Image;
 import com.sha.photoviewer.Builder;
 import com.sha.photoviewer.PhotoViewer;
 import com.sha.photoviewer.listener.OnPhotoSelectedListener;

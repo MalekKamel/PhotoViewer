@@ -1,4 +1,4 @@
-package com.sha.frescoimageviewersample;
+package com.sha.photoviewersample;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sha.frescoimageviewersample.data.Image;
+import com.sha.photoviewersample.data.Image;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

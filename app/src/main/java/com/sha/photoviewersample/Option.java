@@ -1,4 +1,4 @@
-package com.sha.frescoimageviewersample;
+package com.sha.photoviewersample;
 
 public enum Option {
     SHOW_STATUS_BAR(false),

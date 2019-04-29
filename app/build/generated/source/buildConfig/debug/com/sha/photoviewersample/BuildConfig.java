@@ -1,7 +1,7 @@
 /**
  * Automatically generated file. DO NOT MODIFY
  */
-package com.sha.frescoimageviewersample;
+package com.sha.photoviewersample;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");
