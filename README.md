@@ -61,9 +61,9 @@ dependencies {
 
 ### See 'app' module for the full code.
 
-# License
+### License
 
-## Apache license 2.0
+#### Apache license 2.0
 
 ### Credit
  [FrescoImageViewer](https://github.com/stfalcon-studio/FrescoImageViewer).
