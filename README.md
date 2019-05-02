@@ -43,6 +43,7 @@ dependencies {
 ## Customization
 ```java
      builder.setPhotoMargin(this, R.dimen.image_margin)
+                .startAtIndex(startIndex)
                 .setContainerPadding(this, R.dimen.image_margin)
                 .setCanSwipeToDismiss(Option.SWIPE_TO_DISMISS.value)
                 .setZoomable(Option.ZOOMING.value)
@@ -52,7 +53,10 @@ dependencies {
                 .setOnLongClickListener(v -> {
                     Log.d("PhotoViewer", "long clicked!");
                     return false;
-                });
+                })
+		.setOnDismissListener(
+                        () -> Log.d("PhotoViewer", "dismissed")
+                );
 ```
 
 ### See 'app' module for the full code.
