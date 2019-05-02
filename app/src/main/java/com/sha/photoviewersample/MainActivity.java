@@ -122,10 +122,14 @@ public class MainActivity extends AppCompatActivity {
     ){
         progressBar.setVisibility(View.VISIBLE);
 
-        PicassoUtil.bitmap(url, imageView, bitmap -> {
-            imageView.setImageBitmap(bitmap);
-            progressBar.setVisibility(View.GONE);
-        });
+        PicassoUtil.bitmap(
+                url,
+                imageView,
+                bitmap -> {
+                    imageView.setImageBitmap(bitmap);
+                    progressBar.setVisibility(View.GONE);
+                }
+        );
     }
 
     private OnPhotoSelectedListener getImageChangeListener() {
