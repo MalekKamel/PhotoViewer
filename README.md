@@ -18,7 +18,7 @@ allprojects {
 And add to the **module `build.gradle`** file:
 ```gradle
 dependencies {
-	        implementation 'com.github.ShabanKamell:PhotoViewer:Tag'
+	        implementation 'com.github.ShabanKamell:PhotoViewer:1.2.0'
 	}
 ```
 
