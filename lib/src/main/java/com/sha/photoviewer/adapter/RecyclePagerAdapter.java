@@ -2,13 +2,13 @@ package com.sha.photoviewer.adapter;
 
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.SparseArray;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.viewpager.widget.PagerAdapter;
-import android.util.SparseArray;
-import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;

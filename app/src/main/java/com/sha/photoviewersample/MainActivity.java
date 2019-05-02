@@ -16,13 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sha.photoviewersample.data.Data;
-import com.sha.photoviewersample.data.Image;
 import com.sha.photoviewer.Builder;
 import com.sha.photoviewer.PhotoViewer;
 import com.sha.photoviewer.listener.OnPhotoSelectedListener;
+import com.sha.photoviewersample.data.Data;
+import com.sha.photoviewersample.data.Image;
 import com.sha.photoviewersample.util.PicassoUtil;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import java.util.Random;
@@ -138,6 +137,11 @@ public class MainActivity extends AppCompatActivity {
 
     private int getRandomColor() {
         Random random = new Random();
-        return Color.argb(255, random.nextInt(156), random.nextInt(156), random.nextInt(156));
+        return Color.argb(
+                255,
+                random.nextInt(156),
+                random.nextInt(156),
+                random.nextInt(156)
+        );
     }
 }

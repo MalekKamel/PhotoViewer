@@ -21,10 +21,11 @@ public class PicassoUtil {
     }
 
     public static void bitmap(String url, ImageView view, Callable callback) {
+        if (url == null) return;
+
         Target target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                view.setImageBitmap(bitmap);
                 callback.call(bitmap);
             }
 

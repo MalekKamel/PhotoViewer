@@ -3,11 +3,12 @@ package com.sha.photoviewer.pager;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RestrictTo;
 import androidx.viewpager.widget.ViewPager;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
 
 
 @RestrictTo(RestrictTo.Scope.LIBRARY)
