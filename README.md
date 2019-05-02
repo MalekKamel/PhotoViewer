@@ -24,14 +24,20 @@ dependencies {
 
 ## Simple Usage
 ```java
- Builder builder = PhotoViewer.build(
-                this,
-                Data.urls(), 
-                (url, imageView, index, progressBar) -> Picasso.get().load(url).into(imageView)
-        ).startAtIndex(startIndex)
+  Builder builder = PhotoViewer.build(this, Data.urls(), this::loadImage)
+                .startAtIndex(startIndex)
                 .setOnDismissListener(
                         () -> Log.d("PhotoViewer", "dismissed")
                 );
+
+  private void loadImage(
+            @Nullable String url,
+            @NonNull ImageView imageView,
+            int index,
+            @NonNull ProgressBar progressBar
+    ){
+      Picasso.get().load(url).into(imageView);
+    }
 ```
 
 ## Customization
