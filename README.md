@@ -64,3 +64,6 @@ dependencies {
 # License
 
 ## Apache license 2.0
+
+### Credit
+ [FrescoImageViewer](https://github.com/stfalcon-studio/FrescoImageViewer).
