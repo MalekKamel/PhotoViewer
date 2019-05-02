@@ -7,6 +7,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
 import androidx.annotation.DimenRes;
 
+import com.sha.photoviewer.listener.ImageLoader;
 import com.sha.photoviewer.listener.OnDismissListener;
 import com.sha.photoviewer.listener.OnPhotoLoadedListener;
 import com.sha.photoviewer.listener.OnPhotoSelectedListener;
@@ -23,9 +24,14 @@ public class Builder {
      * @param context Context
      * @param photos  List of photos to view
      */
-    public Builder(Context context, List<String> photos) {
+    public Builder(
+            Context context,
+            List<String> photos,
+            ImageLoader imageLoader
+    ) {
         options.context = context;
         options.urls = photos;
+        options.imageLoader = imageLoader;
     }
 
     /**
@@ -124,6 +130,16 @@ public class Builder {
      */
     public Builder showPagingIndicator(boolean show) {
         options.showPagingIndicator = show;
+        return this;
+    }
+
+    /**
+     * listen to long click on photo
+     *
+     * @return this to chain easily
+     */
+    public Builder setOnLongClickListener(View.OnLongClickListener listener) {
+        options.onLongClickListener = listener;
         return this;
     }
 

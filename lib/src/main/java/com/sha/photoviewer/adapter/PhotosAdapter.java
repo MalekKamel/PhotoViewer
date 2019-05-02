@@ -3,13 +3,13 @@ package com.sha.photoviewer.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import androidx.annotation.RestrictTo;
 
 import com.github.chrisbanes.photoview.PhotoView;
 import com.sha.photoviewer.Options;
 import com.sha.photoviewer.R;
-import com.sha.photoviewer.util.PicassoUtil;
 
 import java.util.List;
 
@@ -55,13 +55,15 @@ public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHo
 
     class ImageViewHolder extends ViewHolder {
         private PhotoView photoView;
-        private View progressBar;
+        private ProgressBar progressBar;
 
         ImageViewHolder(View itemView) {
             super(itemView);
             photoView = itemView.findViewById(R.id.photo_view);
             progressBar = itemView.findViewById(R.id.progressBar);
             photoView.setZoomable(options.isZoomable);
+
+            photoView.setOnLongClickListener(options.onLongClickListener);
         }
 
         void bind(int position) {
@@ -79,14 +81,8 @@ public class PhotosAdapter extends RecyclePagerAdapter<PhotosAdapter.ImageViewHo
         private void show(String url, int position) {
             progressBar.setVisibility(View.VISIBLE);
 
-            PicassoUtil.bitmap(
-                    url,
-                    photoView,
-                    bitmap -> {
-                        progressBar.setVisibility(View.GONE);
-                        if (options.onPhotoLoadedListener != null)
-                            options.onPhotoLoadedListener.onLoaded(url, position, bitmap);
-                    });
+            options.imageLoader.load(url, photoView, position, progressBar);
+
         }
     }
 

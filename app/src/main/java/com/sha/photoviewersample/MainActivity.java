@@ -5,7 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -16,6 +21,8 @@ import com.sha.photoviewersample.data.Image;
 import com.sha.photoviewer.Builder;
 import com.sha.photoviewer.PhotoViewer;
 import com.sha.photoviewer.listener.OnPhotoSelectedListener;
+import com.sha.photoviewersample.util.PicassoUtil;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import java.util.Random;
@@ -66,12 +73,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showViewer(int startIndex) {
-        Builder builder = PhotoViewer.build(this, Data.urls())
+        Builder builder = PhotoViewer.build(this, Data.urls(), this::load)
                 .startAtIndex(startIndex)
                 .setOnDismissListener(
                         () -> Log.d("PhotoViewer", "dismissed")
                 );
 
+        extraOptions(builder);
+
+        builder.show();
+    }
+
+    private void extraOptions(Builder builder) {
         builder.showStatusBar(Option.SHOW_STATUS_BAR.value);
 
         if (Option.PHOTO_MARGIN.value)
@@ -93,9 +106,27 @@ public class MainActivity extends AppCompatActivity {
         if (Option.RANDOM_BACKGROUND.value)
             builder.setBackgroundColor(getRandomColor());
 
+        builder.setOnLongClickListener(v -> {
+            Log.d("PhotoViewer", "long clicked!");
+            return false;
+        });
+
         builder.showPagingIndicator(Option.SHOW_PAGING_INDICATOR.value);
 
-        builder.show();
+    }
+
+    private void load(
+            @Nullable String url,
+            @NonNull ImageView imageView,
+            int index,
+            @NonNull ProgressBar progressBar
+    ){
+        progressBar.setVisibility(View.VISIBLE);
+
+        PicassoUtil.bitmap(url, imageView, bitmap -> {
+            imageView.setImageBitmap(bitmap);
+            progressBar.setVisibility(View.GONE);
+        });
     }
 
     private OnPhotoSelectedListener getImageChangeListener() {

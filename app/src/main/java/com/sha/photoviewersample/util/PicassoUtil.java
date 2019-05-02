@@ -1,4 +1,4 @@
-package com.sha.photoviewer.util;
+package com.sha.photoviewersample.util;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;

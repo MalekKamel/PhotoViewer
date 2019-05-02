@@ -8,6 +8,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.RestrictTo;
 import androidx.annotation.StyleRes;
 
+import com.sha.photoviewer.listener.ImageLoader;
 import com.sha.photoviewer.listener.OnDismissListener;
 import com.sha.photoviewer.listener.OnPhotoLoadedListener;
 import com.sha.photoviewer.listener.OnPhotoSelectedListener;
@@ -27,6 +28,8 @@ public class Options {
     public OnPhotoSelectedListener onPhotoSelectedListener;
     public OnDismissListener onDismissListener;
     public OnPhotoLoadedListener onPhotoLoadedListener;
+    public ImageLoader imageLoader;
+    public View.OnLongClickListener onLongClickListener;
 
     public View overlayView;
     public int photoMarginPixels;
