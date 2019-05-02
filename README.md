@@ -24,11 +24,7 @@ dependencies {
 
 ## Simple Usage
 ```java
-  Builder builder = PhotoViewer.build(this, Data.urls(), this::loadImage)
-                .startAtIndex(startIndex)
-                .setOnDismissListener(
-                        () -> Log.d("PhotoViewer", "dismissed")
-                );
+  PhotoViewer.build(this, Data.urls(), this::loadImage).show();
 
   private void loadImage(
             @Nullable String url,
@@ -37,6 +33,10 @@ dependencies {
             @NonNull ProgressBar progressBar
     ){
       Picasso.get().load(url).into(imageView);
+      // Or Glide...etc
+      // GlideApp.with(context)
+      //   .load(url != null ? url : "")
+      //   .into(this)
     }
 ```
 
