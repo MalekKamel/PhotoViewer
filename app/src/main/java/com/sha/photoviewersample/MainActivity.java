@@ -22,6 +22,7 @@ import com.sha.photoviewer.listener.OnPhotoSelectedListener;
 import com.sha.photoviewersample.data.Data;
 import com.sha.photoviewersample.data.Image;
 import com.sha.photoviewersample.util.PicassoUtil;
+import com.sha.photoviewersample.util.SnackBarUtil;
 
 import java.util.List;
 import java.util.Random;
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 (url, position) -> showViewer(position)
         );
         rv.setAdapter(adapter);
+
+        SnackBarUtil.gotIt(findViewById(R.id.rv), "Click settings icon in ToolBar to show options");
 
     }
 
