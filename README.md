@@ -4,6 +4,9 @@ Simple and customizable image viewer with "swipe to dismiss" and "pinch to zoom"
 Compatible with any image processing library such as `Glide`, `Picasso` etc.
 Based on [PhotoView](https://github.com/chrisbanes/PhotoView) by [chrisbanes](https://github.com/chrisbanes).
 
+[![](https://jitpack.io/v/ShabanKamell/PhotoViewer.svg)](https://jitpack.io/#ShabanKamell/PhotoViewer)
+
+
 ![alt tag](https://github.com/ShabanKamell/PhotoViewer/blob/master/blob/master/raw/demo.gif?raw=true)
 
 ## Install
