@@ -82,7 +82,7 @@ public class PhotosView extends RelativeLayout {
         pager.setAdapter(adapter);
         pager.setCurrentItem(options.startAtIndex);
 
-        if (options.showPagingIndicator){
+        if (options.showPagingIndicator) {
             CircleIndicator indicator = findViewById(R.id.indicator);
             indicator.setViewPager(pager);
             pager.getAdapter().registerDataSetObserver(indicator.getDataSetObserver());
@@ -107,7 +107,9 @@ public class PhotosView extends RelativeLayout {
 
     private void setupOverlay() {
         if (options.overlayView == null) return;
-        ((ViewGroup)findViewById(R.id.overlayView)).addView(options.overlayView);
+        ViewGroup root = findViewById(R.id.overlayView);
+        root.addView(options.overlayView);
+        root.bringChildToFront(options.overlayView);
     }
 
     @Override
@@ -127,11 +129,6 @@ public class PhotosView extends RelativeLayout {
     public String getUrl() {
         return adapter.getUrl(pager.getCurrentItem());
     }
-
-
-
-
-
 
 
 }
